@@ -6,13 +6,13 @@ export default function components() {
     return (
         <Container>
             <div>
-                <ul>
-                    <li>Todo List</li>
-                </ul>
+                <span>Lista de tarefas</span>
             </div>
             <div>
-                <input type="text" />
-                <button>adicionar</button>
+                <form>
+                    <input type="text" />
+                    <button>adicionar</button>
+                </form>
             </div>
         </Container>
     );

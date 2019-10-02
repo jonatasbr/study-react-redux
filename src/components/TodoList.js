@@ -12,7 +12,7 @@ export default function TodoList() {
         if (event) {
             const form = event.target;
             event.preventDefault();
-            dispatch(addTodo(form.title.value));
+            dispatch(addTodo(todos.length + 1, form.title.value));
         }
     }
 
@@ -27,7 +27,11 @@ export default function TodoList() {
                 <ul>Lista de tarefas</ul>
                 {todos
                     ? todos.map(todo => {
-                          return <li key={Math.random()}>{todo}</li>;
+                          return (
+                              <li key={todo.id}>
+                                  {todo.id} - {todo.title}
+                              </li>
+                          );
                       })
                     : 'Não há'}
             </div>

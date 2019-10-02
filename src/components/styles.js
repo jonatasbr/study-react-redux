@@ -12,9 +12,37 @@ export const Container = styled.div`
 
     div {
         border: 0px solid green;
-        width: 600px;
+        width: 300px;
         text-align: center;
         margin: 0 0 5px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        ul,
+        li {
+            width: 90%;
+            border: 0px solid red;
+            list-style: none;
+            text-decoration: none;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul {
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #666;
+        }
+
+        li {
+            line-height: 30px;
+        }
 
         span {
             color: #999;
@@ -41,7 +69,7 @@ export const Container = styled.div`
             button {
                 margin: 5px 0 0 5px;
                 padding: 5px 5px 5px 5px;
-                width: 100px;
+                width: 250px;
                 height: 40px;
                 background: #3b9eff;
                 font-weight: bold;
@@ -51,6 +79,7 @@ export const Container = styled.div`
                 font-size: 16px;
                 text-align: center;
                 transition: background 0.2s;
+                margin-bottom: 20px;
                 &:hover {
                     background: ${darken(0.08, '#3b9eff')};
                 }

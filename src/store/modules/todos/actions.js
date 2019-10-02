@@ -1,6 +1,8 @@
+import { TODO_ADD } from '../actionsTypes';
+
 export function addTodo(title) {
     return {
-        type: '@todo/ADD_TODO',
+        type: TODO_ADD,
         title,
     };
 }

@@ -8,12 +8,12 @@ import store from './store';
 import TodoList from './components/TodoList';
 
 function App() {
-    return (
-        <Provider store={store}>
-            <GlobalStyle />
-            <TodoList />
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <GlobalStyle />
+      <TodoList />
+    </Provider>
+  );
 }
 
 export default App;

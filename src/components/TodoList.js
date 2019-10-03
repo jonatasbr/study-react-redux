@@ -24,19 +24,36 @@ export default function TodoList() {
           <button type="submit">adicionar tarefa</button>
         </form>
 
-        <ul>Lista de tarefas</ul>
-        {todos
-          ? todos.map(todo => {
-              return (
-                <li key={todo.id}>
-                  s{todo.id} - {todo.title}
-                  <span>
-                    <button className="btnDelete">remover</button>
-                  </span>
-                </li>
-              );
-            })
-          : 'Não há'}
+        <table>
+          <thead>
+            <tr>
+              <th colSpan={2}>Lista de tarefas</th>
+            </tr>
+          </thead>
+          <tbody>
+            {todos ? (
+              todos.map(todo => {
+                return (
+                  <tr key={todo.id}>
+                    <td className="columnText">
+                      {todo.id} - {todo.title}
+                    </td>
+                    <td className="columnButtons">
+                      {' '}
+                      <button type="button" className="btnDelete">
+                        remover
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
+            ) : (
+              <tr>
+                <td>Não há</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </Container>
   );

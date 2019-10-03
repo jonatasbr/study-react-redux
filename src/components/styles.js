@@ -20,35 +20,31 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-around;
 
-    ul,
-    li {
-      width: 90%;
+    table {
       border: 0px solid red;
-      list-style: none;
-      text-decoration: none;
-
-      span .btnDelete {
-        color: #fff;
-        background: #f06;
-        border: 0;
-        border-radius: 4px;
-        width: 80px;
-        height: 25px;
-        align-self: flex-end;
-      }
+      width: 400px;
     }
 
-    ul {
-      font-weight: bold;
-      font-size: 16px;
+    td {
+      border-top: 1px solid #333;
+      padding: 5px 10px 5px 10px;
+    }
+    .columnText {
+      text-align: left;
+    }
+
+    .columnButtons {
+      text-align: right;
+    }
+
+    .btnDelete {
       color: #fff;
-      text-align: center;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #666;
-    }
-
-    li {
-      line-height: 30px;
+      background: #f06;
+      border: 0;
+      border-radius: 4px;
+      width: 80px;
+      height: 25px;
+      align-self: flex-end;
     }
 
     span {
